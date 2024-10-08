@@ -13,7 +13,7 @@ const AddMember = () => {
         <div>
           <Sidebar />
         </div>
-        <div>
+        <div className="bg-slate-400">
           <RightBar />
         </div>
       </div>

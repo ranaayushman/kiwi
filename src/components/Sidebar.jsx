@@ -52,11 +52,7 @@ const Sidebar = () => {
               }`}
             >
               <img src={menu.src} />
-              <span
-                className={`${
-                  !open && "hidden"
-                } origin-left duration-200 font-semibold`}
-              >
+              <span className={`${!open && "hidden"} origin-left duration-200 font-semibold`}>
                 {menu.title}
               </span>
             </li>
