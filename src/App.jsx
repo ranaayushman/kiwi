@@ -1,13 +1,10 @@
 import React from "react";
-import AddMember from "./sections/AddMemeber";
-import Sidebar from "./components/Sidebar";
-
+import Page from "./sections/Page";
 
 const App = () => {
   return (
     <div>
-      {/* <Sidebar /> */}
-      <AddMember />
+     <Page />
     </div>
   );
 };
