@@ -5,14 +5,15 @@ import RightBar from "../components/RightBar";
 
 const Page = () => {
   return (
-    <div className="flex">
-      <div>
+    <div className="flex gap-x-0">
+      <div className="w-fit">
         <Asidebar />
       </div>
-      <div>
-        <MaxWidthWrapper>
+      <div className="w-full">
+        {/* <MaxWidthWrapper>
           <RightBar />
-        </MaxWidthWrapper>
+        </MaxWidthWrapper> */}
+        <RightBar />
       </div>
     </div>
   );
