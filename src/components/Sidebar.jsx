@@ -19,7 +19,7 @@ const Asidebar = () => {
         />
         <div
           className={`flex ${
-            open ? "justify-start" : "justify-center"
+            open ? "justify-center" : "justify-center"
           } items-center mb-6`}
         >
           <Icon
@@ -32,13 +32,13 @@ const Asidebar = () => {
           <h1
             className={`text-[#789336] font-medium text-4xl duration-300 cursor-pointer ${
               !open ? "hidden" : "block"
-            }`}
+            } ${open ? "w-full text-center" : ""}`}
             onClick={() => setOpen(!open)}
           >
             Kiwi
           </h1>
         </div>
-        <ul className="pt-6">
+        <ul className="pt-0">
           {Menus.map((menu, index) => (
             <li
               key={index}
