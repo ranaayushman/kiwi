@@ -83,26 +83,39 @@ export const formFields = [
 
 export const rightFormFields = [
   {
-    label: "Contact",
-    type: "text",
-    placeholder: "Contact",
-    required: true,
-  },
-  {
-    label: "Address",
-    type: "text",
-    placeholder: "Address",
-    required: true,
-  },
-  {
-    label: "Email Id",
-    type: "email",
-    placeholder: "Enter Email Id",
-    required: true,
-  },
-  {
-    label: "Marriage Anniversary",
-    type: "date",
-    required: false,
+    heading: "Contact Information",
+    fields: [
+      {
+        label: "Contact",
+        type: "text",
+        placeholder: "Contact",
+        required: true,
+      },
+      {
+        label: "Address",
+        type: "text",
+        placeholder: "Address",
+        required: true,
+      },
+      {
+        type: "radio",
+        name: "Batch",
+        options: ["Morning", "Evening"],
+        label: "Batch*",
+        required : true,
+      },
+      {
+        label: "Email Id*",
+        type: "email",
+        placeholder: "Enter Email Id",
+        required: true,
+      },
+      {
+        label: "Marriage Anniversary",
+        type: "date",
+        placeholder:"Select Date",
+        required: false,
+      },
+    ],
   },
 ];

@@ -1,12 +1,12 @@
-import React from 'react'
-import DualFormLayout from '../components/LeftForm';
+import React from "react";
+import DualForm from "../components/DualForm";
 
 const AddMember = () => {
   return (
-    <div className='flex h-full flex-col gap-0'>
-        <DualFormLayout />
+    <div className="shadow-xl pt-4">
+      <DualForm />
     </div>
-  )
-}
+  );
+};
 
 export default AddMember;

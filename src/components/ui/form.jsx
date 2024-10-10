@@ -30,13 +30,13 @@ export const FormField = ({ field }) => {
         <input
           type="text"
           placeholder={field.placeholder}
-          className="w-full p-2 border rounded"
+          className="w-full h-12 p-2 border rounded-xl"
         />
       );
     case "select":
       return (
         <div className="relative">
-          <select className="w-full p-2 border rounded appearance-none">
+          <select className="w-full h-12 p-2 border rounded-xl appearance-none">
             <option>{field.placeholder}</option>
             {field.options &&
               field.options.map((option) => (
@@ -54,14 +54,14 @@ export const FormField = ({ field }) => {
       );
     case "date":
       return (
-        <div className="relative">
+        <div className="relative h-12">
           <input
             type={showDateInput ? "date" : "text"}
             placeholder={field.placeholder}
             onFocus={handleDateFocus}
             onChange={handleDateChange}
             value={dateValue}
-            className="w-full p-2 border rounded"
+            className="w-full p-2 border rounded-xl"
           />
         </div>
       );
@@ -78,7 +78,7 @@ export const FormField = ({ field }) => {
       );
     case "file":
       return (
-        <div className="border-2 border-dashed border-gray-300 p-4 rounded">
+        <div className="border-2 border-dashed border-gray-300 p-4 rounded-xl">
           <div className="flex items-center justify-between">
             <div className="flex items-center">
               <Image className="mr-2 text-gray-400" size={50} />
@@ -104,7 +104,13 @@ export const FormField = ({ field }) => {
           />
         </div>
       );
-    default:
-      return null;
+    case "email":
+      return (
+        <input
+          type="email"
+          placeholder={field.placeholder}
+          className="w-full h-12 p-2 border rounded-xl"
+        />
+      );
   }
 };

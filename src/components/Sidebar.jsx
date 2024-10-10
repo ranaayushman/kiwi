@@ -6,7 +6,7 @@ const Asidebar = () => {
   const [open, setOpen] = useState(true);
 
   return (
-    <div className="flex shadow-2xl z-10">
+    <div className="flex sticky inset-0 shadow-2xl z-10">
       <div
         className={`${
           open ? "w-56" : "w-20"
