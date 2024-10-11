@@ -12,11 +12,11 @@ const Asidebar = () => {
           open ? "w-56" : "w-20"
         } duration-300 h-full p-5 pt-8 relative bg-white border-r border-gray-200 shadow-lg`}
       >
-        <Icon
+        {/* <Icon
           icon={open ? "akar-icons:chevron-left" : "akar-icons:chevron-right"}
           className="absolute cursor-pointer -right-3 top-9 w-7 h-7 border-2 border-slate-400 rounded-full bg-white"
           onClick={() => setOpen(!open)}
-        />
+        /> */}
         <div
           className={`flex ${
             open ? "justify-center" : "justify-center"

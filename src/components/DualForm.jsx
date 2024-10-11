@@ -1,6 +1,7 @@
 import { formFields, rightFormFields } from "../constants/index";
 import Button from "./ui/Button";
 import { FormField } from "./ui/form";
+import Radio from "./ui/Radio";
 
 const DualForm = () => {
   return (
@@ -18,6 +19,7 @@ const DualForm = () => {
                   <FormField field={field} />
                 </div>
               ))}
+              <Radio />
             </div>
           </div>
         ))}

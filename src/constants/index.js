@@ -40,18 +40,18 @@ export const formFields = [
         placeholder: "Upload a profile picture (maximum 2MB)",
         label: "Profile Picture*",
       },
-      {
-        type: "radio",
-        name: "gender",
-        options: ["Male", "Female"],
-        label: "Gender*",
-      },
-      {
-        type: "radio",
-        name: "status",
-        options: ["Single", "Married"],
-        label: "Status*",
-      },
+      // {
+      //   type: "radio",
+      //   name: "gender",
+      //   options: ["Male", "Female"],
+      //   label: "Gender*",
+      // },
+      // {
+      //   type: "radio",
+      //   name: "status",
+      //   options: ["Single", "Married"],
+      //   label: "Status*",
+      // },
     ],
   },
   {
