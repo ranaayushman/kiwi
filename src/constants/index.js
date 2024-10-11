@@ -49,18 +49,6 @@ export const formFields = [
         placeholder: "Upload a profile picture (maximum 2MB)",
         label: "Profile Picture*",
       },
-      // {
-      //   type: "radio",
-      //   name: "gender",
-      //   options: ["Male", "Female"],
-      //   label: "Gender*",
-      // },
-      // {
-      //   type: "radio",
-      //   name: "status",
-      //   options: ["Single", "Married"],
-      //   label: "Status*",
-      // },
     ],
   },
   {
@@ -81,7 +69,7 @@ export const formFields = [
         label: "Due Amount Reminder",
       },
       {
-        type: "text",
+        type: "date",
         placeholder: "2023-05-25",
         label: "Bill Date",
         readOnly: true,

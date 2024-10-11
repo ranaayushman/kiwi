@@ -3,7 +3,7 @@ import { Search } from "lucide-react";
 
 const Navbar = () => {
   return (
-    <nav className="p-4 pt-0 sticky top-0 inset-x-0 transition-all shadow-xl w-full z-[100]">
+    <nav className="p-4 pt-0 shadow-xl w-full">
       <div className="container mx-auto flex items-center pl-10">
         <div className="w-64">
           <div className="relative">

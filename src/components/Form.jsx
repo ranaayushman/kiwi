@@ -6,7 +6,7 @@ import Radio from "./ui/Radio";
 
 const Form = () => {
   return (
-    <div className="flex justify-between gap-8 p-6 bg-white rounded-lg shadow">
+    <div className="flex justify-between gap-8 p-6 bg-white rounded-lg drop-shadow-xl">
       <div className="w-1/2">
         {formFields.map((section, index) => (
           <div key={section.section} className="mb-6">
