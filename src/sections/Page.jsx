@@ -27,8 +27,8 @@ const Page = () => {
             <Navbar />
           </div>
           <Routes>
-            <Route path="/" element={<Dashboard />} />
-            <Route path="/add-member" element={<RightBar />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/" element={<RightBar />} />
             <Route path="/add-staff" element={<AddStaff />} />
             <Route path="/member-list" element={<MemberList />} />
             <Route path="/staff-list" element={<StaffList />} />
