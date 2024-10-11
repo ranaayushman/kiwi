@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Icon } from "@iconify/react";
+import { Link } from "react-router-dom";
 import { Menus } from "../constants";
 
 const Asidebar = () => {
@@ -12,16 +13,7 @@ const Asidebar = () => {
           open ? "w-56" : "w-20"
         } duration-300 h-full p-0 pt-8 relative bg-white border-r border-gray-200 shadow-lg`}
       >
-        {/* <Icon
-          icon={open ? "akar-icons:chevron-left" : "akar-icons:chevron-right"}
-          className="absolute cursor-pointer -right-3 top-9 w-7 h-7 border-2 border-slate-400 rounded-full bg-white"
-          onClick={() => setOpen(!open)}
-        /> */}
-        <div
-          className={`flex ${
-            open ? "justify-center" : "justify-center"
-          } items-center mb-6`}
-        >
+        <div className="flex justify-center items-center mb-6">
           <Icon
             icon="ci:hamburger"
             className={`w-10 h-10 text-[#789336] cursor-pointer ${
@@ -46,20 +38,21 @@ const Asidebar = () => {
                 menu.gap ? "mt-9" : "mt-2"
               } ${!open && "justify-center"} group`}
             >
-              <div className="relative pl-4">
-                <Icon
-                  icon={menu.icon}
-                  className="z-10 relative text-slate-900 group-hover:text-white transition-colors duration-200"
-                  fontSize={20}
-                />
-              </div>
-              <span
-                className={`${
-                  !open && "hidden"
-                } origin-left duration-200 font-semibold group-hover:text-white`}
-              >
-                {menu.title}
-              </span>
+              <Link to={menu.href} className="flex items-center w-full">
+                <div className="relative px-4">
+                  <Icon
+                    icon={menu.icon}
+                    className="z-10 relative text-slate-900 group-hover:text-white transition-colors duration-200"
+                  />
+                </div>
+                <span
+                  className={`${
+                    !open && "hidden"
+                  } origin-left duration-200 font-semibold group-hover:text-white`}
+                >
+                  {menu.title}
+                </span>
+              </Link>
             </li>
           ))}
         </ul>

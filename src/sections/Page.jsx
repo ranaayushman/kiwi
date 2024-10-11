@@ -1,21 +1,48 @@
 import React from "react";
 import Asidebar from "../components/Sidebar";
-import MaxWidthWrapper from "../components/mmw";
 import RightBar from "../components/RightBar";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Dashboard from "../Pages/Dashboard";
+import AddStaff from "../Pages/AddStaff";
+import MemberList from "../Pages/MemberList";
+import StaffList from "../Pages/StaffList";
+import Batch from "../Pages/Batch";
+import Navbar from "../components/Navbar";
+import Attendance from "../Pages/Attendance";
+import Payments from "../Pages/Payments";
+import Plans from "../Pages/Plans";
+import SMS from "../Pages/SMS";
+import Expenses from "../Pages/Expenses";
+import Reports from "../Pages/Reports";
 
 const Page = () => {
   return (
-    <div className="flex gap-x-0">
-      <div className="w-fit">
-        <Asidebar />
+    <Router>
+      <div className="flex gap-x-0">
+        <div className="w-fit">
+          <Asidebar />
+        </div>
+        <div className="w-full flex flex-col gap-y-4">
+          <div className="shadow-b-lg text-5xl">
+            <Navbar />
+          </div>
+          <Routes>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/add-member" element={<RightBar />} />
+            <Route path="/add-staff" element={<AddStaff />} />
+            <Route path="/member-list" element={<MemberList />} />
+            <Route path="/staff-list" element={<StaffList />} />
+            <Route path="/batch" element={<Batch />} />
+            <Route path="/attendance" element={<Attendance />} />
+            <Route path="/payments" element={<Payments />} />
+            <Route path="/plans" element={<Plans />} />
+            <Route path="/sms" element={<SMS />} />
+            <Route path="/expenses" element={<Expenses />} />
+            <Route path="/reports" element={<Reports />} />
+          </Routes>
+        </div>
       </div>
-      <div className="w-full">
-        {/* <MaxWidthWrapper>
-          <RightBar />
-        </MaxWidthWrapper> */}
-        <RightBar />
-      </div>
-    </div>
+    </Router>
   );
 };
 
