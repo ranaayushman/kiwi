@@ -1,3 +1,4 @@
+import React from 'react';
 import { formFields, rightFormFields } from "../constants/index";
 import Button from "./ui/Button";
 import { FormField } from "./ui/form";
@@ -7,7 +8,7 @@ const DualForm = () => {
   return (
     <div className="flex justify-between gap-8 p-6 bg-white rounded-lg shadow">
       <div className="w-1/2">
-        {formFields.map((section) => (
+        {formFields.map((section, index) => (
           <div key={section.section} className="mb-6">
             <h3 className="text-lg font-semibold mb-4">{section.section}</h3>
             <div className="space-y-4">
@@ -19,7 +20,7 @@ const DualForm = () => {
                   <FormField field={field} />
                 </div>
               ))}
-              <Radio />
+              {index === 0 && <Radio />}
             </div>
           </div>
         ))}

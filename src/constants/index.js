@@ -102,7 +102,7 @@ export const rightFormFields = [
         name: "Batch",
         options: ["Morning", "Evening"],
         label: "Batch*",
-        required : true,
+        required: true,
       },
       {
         label: "Email Id*",
@@ -113,9 +113,9 @@ export const rightFormFields = [
       {
         label: "Marriage Anniversary",
         type: "date",
-        placeholder:"Select Date",
+        placeholder: "Select Date",
         required: false,
       },
-    ],
-  },
+    ],
+  },
 ];
