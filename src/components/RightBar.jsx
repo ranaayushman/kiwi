@@ -1,8 +1,6 @@
 import React from "react";
-import Navbar from "./Navbar";
 import MaxWidthWrapper from "./mmw";
-
-import DualForm from "./DualForm";
+import Form from "./Form";
 
 const RightBar = () => {
   return (
@@ -11,7 +9,7 @@ const RightBar = () => {
         <div>
           <h1 className="text-2xl font-bold">Add Members</h1>
           <div>
-            <DualForm />
+            <Form />
           </div>
         </div>
       </MaxWidthWrapper>

@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 import { formFields, rightFormFields } from "../constants/index";
 import Button from "./ui/Button";
 import { FormField } from "./ui/form";
 import Radio from "./ui/Radio";
 
-const DualForm = () => {
+const Form = () => {
   return (
     <div className="flex justify-between gap-8 p-6 bg-white rounded-lg shadow">
       <div className="w-1/2">
@@ -47,4 +47,4 @@ const DualForm = () => {
   );
 };
 
-export default DualForm;
+export default Form;
