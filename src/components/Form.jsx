@@ -6,8 +6,8 @@ import Radio from "./ui/Radio";
 
 const Form = () => {
   return (
-    <div className="flex justify-between gap-8 p-6 bg-white rounded-lg drop-shadow-xl">
-      <div className="w-1/2">
+    <div className="flex flex-col md:flex-row justify-between gap-8 p-6 bg-white rounded-lg drop-shadow-xl">
+      <div className="w-full md:w-1/2">
         {formFields.map((section, index) => (
           <div key={section.section} className="mb-6">
             <h3 className="text-lg font-semibold mb-4">{section.section}</h3>
@@ -25,7 +25,7 @@ const Form = () => {
           </div>
         ))}
       </div>
-      <div className="w-1/2">
+      <div className="w-full md:w-1/2">
         {rightFormFields.map((section) => (
           <div key={section.heading} className="mb-6">
             <h3 className="text-lg font-semibold mb-4">{section.heading}</h3>
@@ -41,7 +41,9 @@ const Form = () => {
             </div>
           </div>
         ))}
-        <Button />
+        <div className="mt-4 md:mt-0">
+          <Button />
+        </div>
       </div>
     </div>
   );

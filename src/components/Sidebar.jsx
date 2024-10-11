@@ -34,13 +34,14 @@ const Asidebar = () => {
           {Menus.map((menu, index) => (
             <li
               key={index}
-              className={`text-slate-900 text-sm flex items-center gap-x-4 cursor-pointer p-2 hover:bg-[#789336] ${
+              className={`text-slate-900 text-md flex items-center gap-x-4 cursor-pointer p-2 hover:bg-[#789336] ${
                 menu.gap ? "mt-9" : "mt-2"
               } ${!open && "justify-center"} group`}
             >
               <Link to={menu.href} className="flex items-center w-full">
                 <div className="relative px-4">
                   <Icon
+                    fontSize={24}
                     icon={menu.icon}
                     className="z-10 relative text-slate-900 group-hover:text-white transition-colors duration-200"
                   />
