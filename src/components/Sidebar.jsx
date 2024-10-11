@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { Icon } from "@iconify/react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Menus } from "../constants";
 
 const Asidebar = () => {
   const [open, setOpen] = useState(true);
-
+  const location = useLocation();
   return (
     <div className="flex sticky inset-0 shadow-2xl z-10">
       <div
@@ -31,31 +31,38 @@ const Asidebar = () => {
           </h1>
         </div>
         <ul className="pt-0">
-          {Menus.map((menu, index) => (
-            <li
-              key={index}
-              className={`text-slate-900 text-md flex items-center gap-x-4 cursor-pointer p-2 hover:bg-[#789336] ${
-                menu.gap ? "mt-9" : "mt-2"
-              } ${!open && "justify-center"} group`}
-            >
-              <Link to={menu.href} className="flex items-center w-full">
-                <div className="relative px-4">
-                  <Icon
-                    fontSize={24}
-                    icon={menu.icon}
-                    className="z-10 relative text-slate-900 group-hover:text-white transition-colors duration-200"
-                  />
-                </div>
-                <span
-                  className={`${
-                    !open && "hidden"
-                  } origin-left duration-200 font-semibold group-hover:text-white`}
-                >
-                  {menu.title}
-                </span>
-              </Link>
-            </li>
-          ))}
+          {Menus.map((menu, index) => {
+            const isActive = location.pathname === menu.href;
+            return (
+              <li
+                key={index}
+                className={`text-md flex items-center gap-x-4 cursor-pointer p-2 hover:bg-[#789336] ${
+                  menu.gap ? "mt-9" : "mt-2"
+                } ${!open && "justify-center"} group ${
+                  isActive ? "bg-[#789336] text-white" : "text-slate-900"
+                }`}
+              >
+                <Link to={menu.href} className="flex items-center w-full">
+                  <div className="relative px-4">
+                    <Icon
+                      fontSize={24}
+                      icon={menu.icon}
+                      className={`z-10 relative ${
+                        isActive ? "text-white" : "text-slate-900"
+                      } group-hover:text-white transition-colors duration-200`}
+                    />
+                  </div>
+                  <span
+                    className={`${
+                      !open && "hidden"
+                    } origin-left duration-200 font-semibold group-hover:text-white`}
+                  >
+                    {menu.title}
+                  </span>
+                </Link>
+              </li>
+            );
+          })}
         </ul>
       </div>
     </div>
