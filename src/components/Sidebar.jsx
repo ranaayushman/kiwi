@@ -10,7 +10,7 @@ const Asidebar = () => {
       <div
         className={`${
           open ? "w-56" : "w-20"
-        } duration-300 h-full p-5 pt-8 relative bg-white border-r border-gray-200 shadow-lg`}
+        } duration-300 h-full p-0 pt-8 relative bg-white border-r border-gray-200 shadow-lg`}
       >
         {/* <Icon
           icon={open ? "akar-icons:chevron-left" : "akar-icons:chevron-right"}
@@ -42,11 +42,11 @@ const Asidebar = () => {
           {Menus.map((menu, index) => (
             <li
               key={index}
-              className={`text-slate-900 text-sm flex items-center gap-x-4 cursor-pointer p-2 hover:bg-[#789336] rounded-md ${
+              className={`text-slate-900 text-sm flex items-center gap-x-4 cursor-pointer p-2 hover:bg-[#789336] ${
                 menu.gap ? "mt-9" : "mt-2"
               } ${!open && "justify-center"} group`}
             >
-              <div className="relative">
+              <div className="relative pl-4">
                 <Icon
                   icon={menu.icon}
                   className="z-10 relative text-slate-900 group-hover:text-white transition-colors duration-200"
