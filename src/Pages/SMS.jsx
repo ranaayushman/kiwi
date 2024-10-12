@@ -1,7 +1,7 @@
 import React from "react";
 import MaxWidthWrapper from "../components/mmw";
 
-const Sms = () => {
+const SMS = () => {
   return (
     <MaxWidthWrapper>
       <div className="text-4xl">SMS</div>
@@ -9,4 +9,4 @@ const Sms = () => {
   );
 };
 
-export default Sms;
+export default SMS;

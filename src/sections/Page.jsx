@@ -13,7 +13,7 @@ import Payments from "../Pages/Payments";
 import Plans from "../Pages/Plans";
 import Expenses from "../Pages/Expenses";
 import Reports from "../Pages/Reports";
-import Sms from "../Pages/Sms";
+import SMS from "../Pages/Sms";
 
 const Page = () => {
   return (
@@ -36,7 +36,7 @@ const Page = () => {
             <Route path="/attendance" element={<Attendance />} />
             <Route path="/payments" element={<Payments />} />
             <Route path="/plans" element={<Plans />} />
-            <Route path="/sms" element={<Sms />} />
+            <Route path="/sms" element={<SMS />} />
             <Route path="/expenses" element={<Expenses />} />
             <Route path="/reports" element={<Reports />} />
           </Routes>
