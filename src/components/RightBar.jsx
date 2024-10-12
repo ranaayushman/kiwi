@@ -8,7 +8,7 @@ const RightBar = () => {
       <MaxWidthWrapper>
         <div>
           <h1 className="text-2xl font-bold">Add Members</h1>
-          <div>
+          <div className="">
             <Form />
           </div>
         </div>
