@@ -11,9 +11,9 @@ import Navbar from "../components/Navbar";
 import Attendance from "../Pages/Attendance";
 import Payments from "../Pages/Payments";
 import Plans from "../Pages/Plans";
+import SMS from "../Pages/Message";
 import Expenses from "../Pages/Expenses";
 import Reports from "../Pages/Reports";
-import SMS from "../Pages/Sms";
 
 const Page = () => {
   return (
