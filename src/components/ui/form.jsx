@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 import { Image, ChevronRight } from "lucide-react";
 
 export const FormField = ({ field }) => {
@@ -110,5 +111,19 @@ export const FormField = ({ field }) => {
           className="w-full h-12 p-2 border rounded-xl"
         />
       );
+    default:
+      return null;
   }
 };
+
+FormField.propTypes = {
+  field: PropTypes.shape({
+    type: PropTypes.oneOf(["text", "select", "date", "radio", "file", "email"])
+      .isRequired,
+    placeholder: PropTypes.string,
+    name: PropTypes.string,
+    options: PropTypes.arrayOf(PropTypes.string),
+  }).isRequired,
+};
+
+export default FormField;
