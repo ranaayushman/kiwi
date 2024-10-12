@@ -126,7 +126,7 @@ export const FormField = ({ field }) => {
 
 FormField.propTypes = {
   field: PropTypes.shape({
-    type: PropTypes.oneOf(["text", "select", "date", "radio", "file", "email"])
+    type: PropTypes.oneOf(["text", "select", "date", "radio", "file", "email","tel"])
       .isRequired,
     placeholder: PropTypes.string,
     name: PropTypes.string,
