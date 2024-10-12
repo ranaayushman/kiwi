@@ -111,6 +111,14 @@ export const FormField = ({ field }) => {
           className="w-full h-12 p-2 border rounded-xl"
         />
       );
+    case "tel":
+      return (
+        <input
+          type="tel"
+          placeholder={field.placeholder}
+          className="w-full h-12 p-2 border rounded-xl"
+        />
+      );
     default:
       return null;
   }

@@ -84,7 +84,7 @@ export const rightFormFields = [
     fields: [
       {
         label: "Contact",
-        type: "text",
+        type: "tel",
         placeholder: "Contact",
         required: true,
       },
