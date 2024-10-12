@@ -11,9 +11,9 @@ import Navbar from "../components/Navbar";
 import Attendance from "../Pages/Attendance";
 import Payments from "../Pages/Payments";
 import Plans from "../Pages/Plans";
-import SMS from "../Pages/SMS";
 import Expenses from "../Pages/Expenses";
 import Reports from "../Pages/Reports";
+import Sms from "../Pages/Sms";
 
 const Page = () => {
   return (
@@ -36,7 +36,7 @@ const Page = () => {
             <Route path="/attendance" element={<Attendance />} />
             <Route path="/payments" element={<Payments />} />
             <Route path="/plans" element={<Plans />} />
-            <Route path="/sms" element={<SMS />} />
+            <Route path="/sms" element={<Sms />} />
             <Route path="/expenses" element={<Expenses />} />
             <Route path="/reports" element={<Reports />} />
           </Routes>
